@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lis'n'Go — Swedish Listening Drills</title>
+  <meta name="description" content="Master Swedish by ear. 600+ native-quality phrases, smart shuffle, quiz mode. Free listening drill app.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0A0E1A;
+      color: #E2E8F0;
+      line-height: 1.7;
+    }
+    .container { max-width: 640px; margin: 0 auto; padding: 2rem 1.5rem; }
+    a { color: #FACC15; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Language switch */
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid #FACC15;
+      color: #FACC15;
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      margin-left: 0.3rem;
+    }
+    .lang-switch button:hover { background: rgba(250,204,21,0.15); }
+    .section { display: none; }
+    .section.active { display: block; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+    }
+    .hero-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #FACC15;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: #94A3B8;
+      margin-bottom: 1.2rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(250,204,21,0.12);
+      border: 1px solid rgba(250,204,21,0.3);
+      color: #FACC15;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .feature {
+      background: rgba(30,41,59,0.5);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature h3 {
+      font-size: 0.85rem;
+      color: #F1F5F9;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .feature p {
+      font-size: 0.75rem;
+      color: #64748B;
+      line-height: 1.4;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+    .cta h2 {
+      font-size: 1.2rem;
+      color: #F1F5F9;
+      margin-bottom: 0.5rem;
+    }
+    .cta p {
+      font-size: 0.9rem;
+      color: #94A3B8;
+      margin-bottom: 1.2rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #FACC15;
+      color: #422006;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border-radius: 10px;
+      transition: opacity 0.2s;
+    }
+    .cta-button:hover { opacity: 0.9; text-decoration: none; }
+
+    /* Store badges placeholder */
+    .stores {
+      text-align: center;
+      margin: 1.5rem 0;
+      color: #475569;
+      font-size: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(30,41,59,0.8);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+    footer a { color: #64748B; }
+    footer .links { margin-bottom: 0.5rem; }
+    footer .links a { margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="section active">
+      <div class="hero">
+        <img src="icon.png" alt="Lis'n'Go icon" class="hero-icon">
+        <h1>Lis'n'Go</h1>
+        <p class="tagline">Master Swedish by ear</p>
+        <span class="badge">Coming Soon</span>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🎧</div>
+          <h3>600+ Phrases</h3>
+          <p>Native-quality Swedish audio, male & female voices</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔀</div>
+          <h3>Smart Shuffle</h3>
+          <p>Focuses on phrases you struggle with most</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">❓</div>
+          <h3>Quiz Mode</h3>
+          <p>Listen and pick the correct meaning</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🥜</div>
+          <h3>Add Your Own</h3>
+          <p>Create custom phrases with auto-translation</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h2>Join the Beta</h2>
+        <p>Be the first to try Lis'n'Go. Help shape the app before public launch.</p>
+        <a href="https://discord.gg/PLACEHOLDER" class="cta-button">Join Discord</a>
+      </div>
+
+      <div class="stores">
+        Coming soon to App Store & Google Play
+      </div>
+
+      <footer>
+        <div class="links">
+          <a href="https://mugime-shi.github.io/lisngo-privacy/">Privacy Policy</a>
+          <a href="mailto:mugimeishi@gmail.com">Contact</a>
+        </div>
+        <p>&copy; 2026 Lis'n'Go</p>
+      </footer>
+    </div>
+
+    <!-- Japanese -->
+    <div id="ja" class="section">
+      <div class="hero">
+        <img src="icon.png" alt="Lis'n'Go アイコン" class="hero-icon">
+        <h1>Lis'n'Go</h1>
+        <p class="tagline">耳で覚えるスウェーデン語</p>
+        <span class="badge">Coming Soon</span>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🎧</div>
+          <h3>600+ フレーズ</h3>
+          <p>ネイティブ品質の音声、男女2種類</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔀</div>
+          <h3>スマートシャッフル</h3>
+          <p>苦手なフレーズを重点的に出題</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">❓</div>
+          <h3>クイズモード</h3>
+          <p>聴いて正しい意味を選ぶ</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🥜</div>
+          <h3>自分のフレーズ</h3>
+          <p>自動翻訳付きでフレーズを追加</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h2>ベータテスターを募集中</h2>
+        <p>正式リリース前にLis'n'Goを試してみませんか？</p>
+        <a href="https://discord.gg/PLACEHOLDER" class="cta-button">Discordに参加</a>
+      </div>
+
+      <div class="stores">
+        App Store & Google Play に近日公開予定
+      </div>
+
+      <footer>
+        <div class="links">
+          <a href="https://mugime-shi.github.io/lisngo-privacy/">プライバシーポリシー</a>
+          <a href="mailto:mugimeishi@gmail.com">お問い合わせ</a>
+        </div>
+        <p>&copy; 2026 Lis'n'Go</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
