@@ -78,6 +78,41 @@
       text-transform: uppercase;
     }
 
+    /* Screenshots — break out of container */
+    .screenshots {
+      display: flex;
+      gap: 12px;
+      margin: 2rem 0;
+      justify-content: center;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 0 1rem;
+    }
+    .screenshots img {
+      flex: 1;
+      min-width: 0;
+      max-width: 280px;
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.12);
+    }
+    @media (max-width: 640px) {
+      .screenshots {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0 1.5rem;
+      }
+      .screenshots::-webkit-scrollbar { display: none; }
+      .screenshots img {
+        flex: none;
+        width: 72%;
+        max-width: none;
+        scroll-snap-align: center;
+      }
+    }
+
     /* Features */
     .features {
       display: grid;
@@ -190,6 +225,12 @@
         <span class="badge">Free Beta</span>
       </div>
 
+      <div class="screenshots">
+        <img src="screenshot-player.png" alt="Player screen" loading="lazy">
+        <img src="screenshot-ear-training.png" alt="Ear Training screen" loading="lazy">
+        <img src="screenshot-list.png" alt="Phrase list screen" loading="lazy">
+      </div>
+
       <div class="features">
         <div class="feature">
           <div class="feature-icon">🥜</div>
@@ -253,6 +294,12 @@
         <p class="tagline">スウェーデン人の言葉が、聞こえるようになる（かも）</p>
         <p class="sub-tagline">スウェーデン語学習者が作ったリスニング練習アプリ</p>
         <span class="badge">Free Beta</span>
+      </div>
+
+      <div class="screenshots">
+        <img src="screenshot-player.png" alt="プレイヤー画面" loading="lazy">
+        <img src="screenshot-ear-training.png" alt="聞き分け画面" loading="lazy">
+        <img src="screenshot-list.png" alt="フレーズリスト" loading="lazy">
       </div>
 
       <div class="features">
