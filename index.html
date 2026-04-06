@@ -113,6 +113,33 @@
       }
     }
 
+    /* Audio demo */
+    .audio-demo {
+      text-align: center;
+      margin: 1.5rem 0 2rem;
+    }
+    .audio-demo p {
+      font-size: 0.8rem;
+      color: #64748B;
+      margin-bottom: 0.8rem;
+    }
+    .audio-demo .demo-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .audio-demo label {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      font-weight: 600;
+    }
+    .audio-demo audio {
+      height: 32px;
+      max-width: 200px;
+    }
+
     /* Features */
     .features {
       display: grid;
@@ -231,6 +258,16 @@
         <img src="screenshot-list.png" alt="Phrase list screen" loading="lazy">
       </div>
 
+      <div class="audio-demo">
+        <p>"Trevligt att träffas! I den här appen används den här typen av röst."</p>
+        <div class="demo-row">
+          <label>Female</label>
+          <audio controls preload="none" src="demo-female.mp3"></audio>
+          <label>Male</label>
+          <audio controls preload="none" src="demo-male.mp3"></audio>
+        </div>
+      </div>
+
       <div class="features">
         <div class="feature">
           <div class="feature-icon">🥜</div>
@@ -240,7 +277,7 @@
         <div class="feature">
           <div class="feature-icon">🎧</div>
           <h3>2960+ Phrases</h3>
-          <p>High-quality TTS voices across 4 levels and 35 categories</p>
+          <p>High-quality AI voices across 4 levels and 35 categories</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🎛️</div>
@@ -300,6 +337,16 @@
         <img src="screenshot-player.png" alt="プレイヤー画面" loading="lazy">
         <img src="screenshot-ear-training.png" alt="聞き分け画面" loading="lazy">
         <img src="screenshot-list.png" alt="フレーズリスト" loading="lazy">
+      </div>
+
+      <div class="audio-demo">
+        <p>「はじめまして！このアプリではこのような音声が使われています。」</p>
+        <div class="demo-row">
+          <label>女性</label>
+          <audio controls preload="none" src="demo-female.mp3"></audio>
+          <label>男性</label>
+          <audio controls preload="none" src="demo-male.mp3"></audio>
+        </div>
       </div>
 
       <div class="features">
