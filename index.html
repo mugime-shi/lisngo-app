@@ -116,28 +116,39 @@
     /* Audio demo */
     .audio-demo {
       text-align: center;
-      margin: 1.5rem 0 2rem;
+      margin: 3rem 0;
+      padding: 1.5rem 1rem;
+      background: rgba(30,41,59,0.3);
+      border-radius: 12px;
     }
     .audio-demo p {
       font-size: 0.8rem;
       color: #64748B;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
     }
     .audio-demo .demo-row {
       display: flex;
-      gap: 12px;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.8rem;
       align-items: center;
-      flex-wrap: wrap;
+    }
+    .audio-demo .demo-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     .audio-demo label {
       font-size: 0.75rem;
       color: #94A3B8;
       font-weight: 600;
+      min-width: 50px;
+      text-align: right;
     }
     .audio-demo audio {
       height: 32px;
-      max-width: 200px;
+      max-width: 220px;
     }
 
     /* Features */
@@ -261,10 +272,14 @@
       <div class="audio-demo">
         <p>"Trevligt att träffas! I den här appen används den här typen av röst."</p>
         <div class="demo-row">
-          <label>Female</label>
-          <audio controls preload="none" src="demo-female.mp3"></audio>
-          <label>Male</label>
-          <audio controls preload="none" src="demo-male.mp3"></audio>
+          <div class="demo-item">
+            <label>Female</label>
+            <audio controls preload="none" src="demo-female.mp3"></audio>
+          </div>
+          <div class="demo-item">
+            <label>Male</label>
+            <audio controls preload="none" src="demo-male.mp3"></audio>
+          </div>
         </div>
       </div>
 
@@ -342,10 +357,14 @@
       <div class="audio-demo">
         <p>「はじめまして！このアプリではこのような音声が使われています。」</p>
         <div class="demo-row">
-          <label>女性</label>
-          <audio controls preload="none" src="demo-female.mp3"></audio>
-          <label>男性</label>
-          <audio controls preload="none" src="demo-male.mp3"></audio>
+          <div class="demo-item">
+            <label>女性</label>
+            <audio controls preload="none" src="demo-female.mp3"></audio>
+          </div>
+          <div class="demo-item">
+            <label>男性</label>
+            <audio controls preload="none" src="demo-male.mp3"></audio>
+          </div>
         </div>
       </div>
 
