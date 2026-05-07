@@ -4,7 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lis'n'Go — Swedish Listening Drills</title>
-  <meta name="description" content="Train your Swedish ear. 2960+ phrases, ear training, smart shuffle, quiz mode. Free listening drill app built by a fellow learner.">
+  <meta name="description" content="Train your Swedish ear. 2960+ phrases, ear training, smart shuffle, quiz mode. Free iOS app built by a fellow learner.">
+
+  <!-- iOS Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=6761506717">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lis'n'Go — Swedish Listening Drills">
+  <meta property="og:description" content="Train your Swedish ear. 2960+ phrases, ear training, smart shuffle. Free on the App Store.">
+  <meta property="og:image" content="https://mugime-shi.github.io/lisngo-app/screenshot-player.jpg">
+  <meta property="og:url" content="https://mugime-shi.github.io/lisngo-app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lis'n'Go — Swedish Listening Drills">
+  <meta name="twitter:description" content="Train your Swedish ear. 2960+ phrases, ear training, smart shuffle. Free on the App Store.">
+  <meta name="twitter:image" content="https://mugime-shi.github.io/lisngo-app/screenshot-player.jpg">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -67,9 +81,9 @@
     }
     .badge {
       display: inline-block;
-      background: rgba(34,197,94,0.12);
-      border: 1px solid rgba(34,197,94,0.3);
-      color: #22C55E;
+      background: rgba(250,204,21,0.12);
+      border: 1px solid rgba(250,204,21,0.35);
+      color: #FACC15;
       font-size: 0.75rem;
       font-weight: 600;
       padding: 0.3rem 0.8rem;
@@ -218,6 +232,18 @@
       transition: opacity 0.2s;
     }
     .cta-button:hover { opacity: 0.9; text-decoration: none; }
+    .appstore-badge {
+      display: inline-block;
+      transition: opacity 0.2s;
+      /* Apple guideline: keep clear space ≥ ~10% of badge height around it */
+      padding: 4px 0;
+    }
+    .appstore-badge:hover { opacity: 0.85; text-decoration: none; }
+    .appstore-badge img {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
     .cta-secondary {
       display: inline-block;
       border: 1px solid rgba(148,163,184,0.2);
@@ -266,13 +292,14 @@
         <h1>Lis'n'Go</h1>
         <p class="tagline">Finally understand what Swedes are saying (maybe)</p>
         <p class="sub-tagline">A listening drill app built by a fellow Swedish learner</p>
-        <span class="badge">Free Beta</span>
+        <span class="badge">Now on App Store</span>
       </div>
 
       <div class="screenshots">
-        <img src="screenshot-player.png" alt="Player screen" loading="lazy">
-        <img src="screenshot-ear-training.png" alt="Ear Training screen" loading="lazy">
-        <img src="screenshot-list.png" alt="Phrase list screen" loading="lazy">
+        <img src="screenshot-player.jpg" alt="Player screen" loading="lazy">
+        <img src="screenshot-ear-training.jpg" alt="Ear Training screen" loading="lazy">
+        <img src="screenshot-list.jpg" alt="Phrase list screen" loading="lazy">
+        <img src="screenshot-add-phrase.jpg" alt="Add your own phrase screen" loading="lazy">
       </div>
 
       <div class="audio-demo">
@@ -324,10 +351,12 @@
       </div>
 
       <div class="cta">
-        <h2>Try It Free</h2>
-        <p>Available now on TestFlight for iOS. Feedback welcome.</p>
+        <h2>Available Now on iOS</h2>
+        <p>Free on the App Store. iPhone &amp; iPad. Feedback welcome.</p>
         <div class="cta-buttons">
-          <a href="https://testflight.apple.com/join/AeGQdsP3" class="cta-button">Download on TestFlight</a>
+          <a href="https://apps.apple.com/app/lisngo/id6761506717" class="appstore-badge" aria-label="Download on the App Store">
+            <img src="appstore-badge-en.svg" alt="Download on the App Store">
+          </a>
           <a href="https://discord.gg/bqSWBntbm" class="cta-secondary">Join Discord</a>
         </div>
       </div>
@@ -352,13 +381,14 @@
         <h1>Lis'n'Go</h1>
         <p class="tagline">スウェーデン人の言葉が、聞こえるようになる（かも）</p>
         <p class="sub-tagline">スウェーデン語学習者が作ったリスニング練習アプリ</p>
-        <span class="badge">Free Beta</span>
+        <span class="badge">App Store配信中</span>
       </div>
 
       <div class="screenshots">
-        <img src="screenshot-player.png" alt="プレイヤー画面" loading="lazy">
-        <img src="screenshot-ear-training.png" alt="聞き分け画面" loading="lazy">
-        <img src="screenshot-list.png" alt="フレーズリスト" loading="lazy">
+        <img src="screenshot-player.jpg" alt="プレイヤー画面" loading="lazy">
+        <img src="screenshot-ear-training.jpg" alt="聞き分け画面" loading="lazy">
+        <img src="screenshot-list.jpg" alt="フレーズリスト" loading="lazy">
+        <img src="screenshot-add-phrase.jpg" alt="フレーズ追加画面" loading="lazy">
       </div>
 
       <div class="audio-demo">
@@ -410,10 +440,12 @@
       </div>
 
       <div class="cta">
-        <h2>無料で試す</h2>
-        <p>TestFlightでiOS版を公開中。フィードバック歓迎です。</p>
+        <h2>App Storeで配信中</h2>
+        <p>iPhone・iPad対応・無料。フィードバック歓迎です。</p>
         <div class="cta-buttons">
-          <a href="https://testflight.apple.com/join/AeGQdsP3" class="cta-button">TestFlightでダウンロード</a>
+          <a href="https://apps.apple.com/jp/app/lisngo/id6761506717" class="appstore-badge" aria-label="App Storeからダウンロード">
+            <img src="appstore-badge-ja.svg" alt="App Storeからダウンロード">
+          </a>
           <a href="https://discord.gg/bqSWBntbm" class="cta-secondary">Discordに参加</a>
         </div>
       </div>
